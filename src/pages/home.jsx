@@ -10,7 +10,7 @@ import {
   Textarea,
 } from "@material-tailwind/react";
 import { UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
+import { PageTitle, Footer, ContactInfo} from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 
@@ -18,7 +18,7 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('https://images.unsplash.com/photo-1537202108838-e7072bad1927?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1946&q=80')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -28,12 +28,13 @@ export function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Your story starts with us.
+                PANMUN CO., LTD.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+                PANMUN은 전통적인 도서 제공 뿐 아니라 도서관에 필요한 전반적인 서비스,
+                <br />
+                전자자료(EKS), 한국학 장서 배가를 위한 제안 등의 영역으로 서비스를 제공하는 기업입니다.
+                <br />
               </Typography>
             </div>
           </div>
@@ -64,19 +65,30 @@ export function Home() {
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                Working with us is a pleasure
+                1950s부터 함께해 온 우리는
               </Typography>
               <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
+                수출부였던 부서를 독립적인 회사로 설립 해, 보다 전문적인 학술 서비스를 제공하는 회사로서 나아갔습니다.
                 <br />
                 <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+                또한, 우리는 학술 도서관들을 위한 메타데이터 (MARC recods) 제공을 시작한 국내 최초 기업입니다.
+                <br />
+                <br />
+                전통적인 도서 제공만이 아닌 도서관에 필요한 전반적인 서비스를 위해
+                <br />
+                전자자료 (EKS) 제공, 한국학 장서 배가를 위한 제안 등의 영역으로 확장하며  항상  나아가고 있습니다.
+                <br />
+                <br />
+                변화하는 시대에 맞춰 여러분들과 항상 함께 하기 위해 성장하는 기업입니다.
               </Typography>
-              <Button variant="outlined">read more</Button>
+              <a
+                href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outlined">read more</Button>
+              </a>
+
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
@@ -93,12 +105,14 @@ export function Home() {
                     color="blue-gray"
                     className="mb-3 font-bold"
                   >
-                    Top Notch Services
+                    Korean scholarly material specialist
                   </Typography>
                   <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
+                    Here at Panmun, we are working tirelessly for our mission to promote the
+                    Korean culture and to disseminate Korean Studies to wider parts of the
+                    globe.
+                    It is our vision to become a proud bridge that provides connection
+                    between Korea and the world.
                   </Typography>
                 </CardBody>
               </Card>
@@ -132,6 +146,7 @@ export function Home() {
               />
             ))}
           </div>
+
         </div>
       </section>
       <section className="relative bg-blue-gray-50/50 py-24 px-4">
@@ -163,7 +178,10 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle heading="Want to work with us?">
+        </div>
+      </section>
+      <section className="py-24 px-4">
+      <PageTitle heading="Want to work with us?">
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
           <form className="mx-auto mt-12 max-w-3xl text-center">
@@ -176,9 +194,23 @@ export function Home() {
               Send Message
             </Button>
           </form>
+      </section>
+      
+      <section className="relative bg-blue-gray-50/50 py-24 px-4">
+        <div className="container mx-auto flex flex-wrap md:flex-nowrap items-center justify-between p-8">
+        <div className="mb-4 md:mb-0">
+                <Typography variant="h5" className="font-bold mb-4">PANMUN Co., Ltd.</Typography>
+                <Typography className="mb-2">#501, Wooree Venture Town, 466 Gangseo-ro</Typography>
+                <Typography className="mb-2">Gangseo-gu, Seoul, South Korea (07573)</Typography>
+                <Typography className="mb-2">Tel. +82 02.2063.0606</Typography>
+                <Typography>Email. panex@epanmun.co.kr</Typography>
+            </div>
+            <div className="w-full md:w-1/2">
+                <img src="/path-to-your-map-image.jpg" alt="Map" className="w-full rounded-lg shadow-md"/>
+            </div>
         </div>
       </section>
-      <div className="bg-blue-gray-50/50">
+      <div className="">
         <Footer />
       </div>
     </>

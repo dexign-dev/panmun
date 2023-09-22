@@ -9,7 +9,7 @@ import {
 export function FeatureCard({ color, icon, title, description }) {
   return (
     <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
-      <CardBody className="px-8 text-center">
+      <CardBody className="px-4 text-center">
         <IconButton
           variant="gradient"
           size="lg"
@@ -21,7 +21,7 @@ export function FeatureCard({ color, icon, title, description }) {
         <Typography variant="h5" className="mb-2" color="blue-gray">
           {title}
         </Typography>
-        <Typography className="font-normal text-blue-gray-600">
+        <Typography className="font-normal text-blue-gray-600 descriptionText">
           {description}
         </Typography>
       </CardBody>

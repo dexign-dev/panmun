@@ -79,39 +79,39 @@ export function Footer({ title, description, socials, menus, copyright }) {
 }
 
 Footer.defaultProps = {
-  title: "Material Tailwind",
+  title: "PANMUN.CO.LTD.",
   description:
-    "Easy to use React components for Tailwind CSS and Material Design.",
+    "PANMUN은 변화하는 시대에 맞추어 함께 성장하는 기업입니다.",
   socials: [
     {
       color: "blue",
       name: "facebook",
-      path: "https://www.facebook.com/CreativeTim",
+      path: "https://www.facebook.com/",
     },
     {
       color: "light-blue",
       name: "twitter",
-      path: "https://www.twitter.com/creativetim",
+      path: "https://www.twitter.com/",
     },
     {
       color: "purple",
       name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
+      path: "https://www.instagram.com/",
     },
     {
       color: "pink",
       name: "dribbble",
-      path: "https://www.dribbble.com/creativetim",
+      path: "https://www.dribbble.com/",
     },
     {
       color: "red",
       name: "youtube",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      path: "https://www.youtube.com/channel/",
     },
     {
       color: "black",
       name: "github",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      path: "https://github.com/",
     },
   ],
   menus: [
@@ -154,13 +154,13 @@ Footer.defaultProps = {
   ],
   copyright: (
     <>
-      Copyright © {year} Material Tailwind by{" "}
+      Copyright © {year}{" "}
       <a
-        href="https://www.creative-tim.com?ref=mtk"
+        href=""
         target="_blank"
         className="text-blue-gray-500 transition-colors hover:text-blue-500"
       >
-        Creative Tim
+        PANMUN CO.,LTD.
       </a>
       .
     </>
