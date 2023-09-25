@@ -6,16 +6,11 @@ function ScrollWordCloud({ wordsData }) {
   const wordCloudRef = useRef(null);
 
   const checkVisibility = useCallback(() => {
-    if (wordCloudRef.current) {
+    if (!isVisible && wordCloudRef.current) {  // isVisible이 false일 때만 체크
       const rect = wordCloudRef.current.getBoundingClientRect();
       if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        if (!isVisible) {
-          setIsVisible(true);
-        }
-      } else {
-        if (isVisible) {
-          setIsVisible(false);
-        }
+        setIsVisible(true);
+        window.removeEventListener('scroll', checkVisibility);  // isVisible이 true가 되면 이벤트 리스너 제거
       }
     }
   }, [isVisible]);

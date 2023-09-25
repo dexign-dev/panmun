@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .descriptionText {
-    white-space: pre-line;
+  white-space: pre-line;
 }
