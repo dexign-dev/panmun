@@ -129,7 +129,7 @@ Footer.defaultProps = {
         { name: "Blog", path: "https://www.panmun.com" },
         {
           name: "MIT License",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
+          path: "https://github.com/creativetimofficial/material-tailwind/blob/17a585f88189a550ae7b7f17ac71d5b65b48dddc/LICENSE",
         }
       ],
     },

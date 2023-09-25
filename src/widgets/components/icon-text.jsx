@@ -7,19 +7,21 @@ export function IconText({ children, delay, iconSrc }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // 섹션에 스크롤이 도달했을 때
         if (entries[0].isIntersecting) {
+          // 섹션에 스크롤이 도달했을 때
           const timer = setTimeout(() => {
             setVisible(true);
           }, delay);
-          
           return () => clearTimeout(timer);
+        } else {
+          // 섹션에서 스크롤이 벗어났을 때
+          setVisible(false);
         }
       },
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.1 // 어느 정도 보이면 애니메이션을 시작할 것인지 설정
+        threshold: 0.5
       }
     );
 

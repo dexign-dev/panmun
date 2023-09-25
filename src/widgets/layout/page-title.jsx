@@ -7,9 +7,9 @@ export function PageTitle({ heading, children }) {
       <Typography variant="h2" color="blue-gray" className="mb-3">
         {heading}
       </Typography>
-      <Typography variant="lead" className="text-blue-gray-500">
+      <div variant="lead" className="text-blue-gray-500">
         {children}
-      </Typography>
+      </div>
     </div>
   );
 }
