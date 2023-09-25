@@ -135,7 +135,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="px-4 pb-36 pt-20">
+      <section className="px-4 pt-20">
         <div className="container mx-auto">
           <PageTitle heading="Build something">
             Put the potentially record low maximum sea ice extent tihs year down
