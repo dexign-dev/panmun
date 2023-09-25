@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pt-8 pb-6">
+    <footer className="relative px-4 pb-6 pt-8">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
@@ -15,7 +15,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             <Typography className="font-normal text-blue-gray-500">
               {description}
             </Typography>
-            <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
+            <div className="mx-auto mb-8 mt-6 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a
                   key={name}
@@ -32,9 +32,9 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
+          <div className="mx-auto mt-12 flex justify-center gap-24 lg:mt-0">
             {menus.map(({ name, items }) => (
-              <div key={name}>
+              <div key={name} className="flex flex-col">
                 <Typography
                   variant="small"
                   color="blue-gray"
@@ -42,12 +42,14 @@ export function Footer({ title, description, socials, menus, copyright }) {
                 >
                   {name}
                 </Typography>
-                <ul className="mt-3">
+                <ul className="mt-3 flex">
                   {items.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="mr-4 last:mr-0">
                       <Typography
                         as="a"
+                        style={{ cursor: "pointer" }}
                         href={item.path}
+                        onClick={item.onClick}
                         target="_blank"
                         rel="noreferrer"
                         variant="small"
@@ -80,8 +82,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
 
 Footer.defaultProps = {
   title: "PANMUN.CO.LTD.",
-  description:
-    "PANMUN은 변화하는 시대에 맞추어 함께 성장하는 기업입니다.",
+  description: "PANMUN은 변화하는 시대에 맞추어 함께 성장하는 기업입니다.",
   socials: [
     {
       color: "blue",
@@ -118,37 +119,18 @@ Footer.defaultProps = {
     {
       name: "useful links",
       items: [
-        { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-        { name: "Blog", path: "https://www.creative-tim.com/blog" },
-        {
-          name: "Github",
-          path: "https://www.github.com/creativetimofficial/material-tailwind?ref=mtk",
-        },
-        {
-          name: "Free Products",
-          path: "https://www.creative-tim.com/templates/free?ref=mtk",
-        },
-      ],
-    },
-    {
-      name: "other resources",
-      items: [
-        {
-          name: "MIT License",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
-        },
-        {
-          name: "Contribute",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
-        },
-        {
-          name: "Change Log",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
+        { name: "About Us", 
+          onClick: () => handleScrollTo("aboutUsSection")
         },
         {
           name: "Contact Us",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
+          onClick: () => handleScrollTo("contactUsSection")
         },
+        { name: "Blog", path: "https://www.panmun.com" },
+        {
+          name: "MIT License",
+          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
+        }
       ],
     },
   ],
@@ -165,6 +147,13 @@ Footer.defaultProps = {
       .
     </>
   ),
+};
+
+const handleScrollTo = (sectionId) => {
+  const sectionElement = document.getElementById(sectionId);
+  if (sectionElement) {
+    sectionElement.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 Footer.propTypes = {
