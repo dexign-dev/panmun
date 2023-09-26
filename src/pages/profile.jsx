@@ -1,127 +1,101 @@
-import { Avatar, Typography, Button } from "@material-tailwind/react";
 import {
-  MapPinIcon,
-  BriefcaseIcon,
-  BuildingLibraryIcon,
-} from "@heroicons/react/24/solid";
-import { Footer } from "@/widgets/layout";
+  Typography,
+  Button,
+  Select,
+  Option,
+  Input,
+  Textarea,
+} from "@material-tailwind/react";
+import { PageTitle, Footer } from "@/widgets/layout";
 
 export function Profile() {
   return (
     <>
       <section className="relative block h-[50vh]">
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-1.jpg')] bg-cover bg-center" />
+        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-2.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
       </section>
       <section className="relative bg-blue-gray-50/50 py-16 px-4">
         <div className="container mx-auto">
           <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
             <div className="px-6">
-              <div className="flex flex-wrap justify-center">
-                <div className="flex w-full justify-center px-4 lg:order-2 lg:w-3/12">
-                  <div className="relative">
-                    <div className="-mt-20 w-40">
-                      <Avatar
-                        src="/img/team-2.jpg"
-                        alt="Profile picture"
-                        variant="circular"
-                        className="h-full w-full shadow-xl"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-10 flex w-full justify-center px-4 lg:order-3 lg:mt-0 lg:w-4/12 lg:justify-end lg:self-center">
-                  <Button className="bg-blue-400">Conntect</Button>
-                </div>
-                <div className="w-full px-4 lg:order-1 lg:w-4/12">
-                  <div className="flex justify-center py-4 pt-8 lg:pt-4">
-                    <div className="mr-4 p-3 text-center">
-                      <Typography
-                        variant="lead"
-                        color="blue-gray"
-                        className="font-bold uppercase"
-                      >
-                        22
-                      </Typography>
-                      <Typography
-                        variant="small"
-                        className="font-normal text-blue-gray-500"
-                      >
-                        Friends
-                      </Typography>
-                    </div>
-                    <div className="mr-4 p-3 text-center">
-                      <Typography
-                        variant="lead"
-                        color="blue-gray"
-                        className="font-bold uppercase"
-                      >
-                        10
-                      </Typography>
-                      <Typography
-                        variant="small"
-                        className="font-normal text-blue-gray-500"
-                      >
-                        Photos
-                      </Typography>
-                    </div>
-                    <div className="p-3 text-center lg:mr-4">
-                      <Typography
-                        variant="lead"
-                        color="blue-gray"
-                        className="font-bold uppercase"
-                      >
-                        89
-                      </Typography>
-                      <Typography
-                        variant="small"
-                        className="font-normal text-blue-gray-500"
-                      >
-                        Comments
-                      </Typography>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="my-8 text-center">
-                <Typography variant="h2" color="blue-gray" className="mb-2">
-                  Jenna Stones
-                </Typography>
-                <div className="mb-16 flex items-center justify-center gap-2">
-                  <MapPinIcon className="-mt-px h-4 w-4 text-blue-gray-700" />
-                  <Typography className="font-medium text-blue-gray-700">
-                    Los Angeles, California
-                  </Typography>
-                </div>
-                <div className="mb-2 flex items-center justify-center gap-2">
-                  <BriefcaseIcon className="-mt-px h-4 w-4 text-blue-gray-700" />
-                  <Typography className="font-medium text-blue-gray-700">
-                    Solution Manager - Creative Tim Officer
-                  </Typography>
-                </div>
-                <div className="mb-2 flex items-center justify-center gap-2">
-                  <BuildingLibraryIcon className="-mt-px h-4 w-4 text-blue-gray-700" />
-                  <Typography className="font-medium text-blue-gray-700">
-                    University of Computer Science
-                  </Typography>
-                </div>
-              </div>
-
               <div className="mb-10 border-t border-blue-gray-50 py-6 text-center">
-                <div className="mt-2 flex flex-wrap justify-center">
-                  <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
-                    <Typography className="mb-8 font-normal text-blue-gray-500">
-                      An artist of considerable range, Jenna the name taken by
-                      Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                      performs and records all of his own music, giving it a
-                      warm, intimate feel with a solid groove structure. An
-                      artist of considerable range.
-                    </Typography>
-                    <Button variant="text">Show more</Button>
-                  </div>
+                <div className="relative py-24 px-4">
+                  <PageTitle heading="Want to work with us?">
+                    Complete this form and we will get back to you in 24 hours.
+                  </PageTitle>
+                  <form className="mx-auto mt-12 max-w-screen-lg text-center">
+                    <div className="mb-8 flex gap-8">
+                      <Input variant="standard" size="lg" label="Full Name" />
+                      <Input variant="standard" size="lg" label="Email Address" />
+                    </div>
+                    <div className="mb-8 flex gap-8">
+                      <Input variant="standard" size="lg" label="Affiliation" />
+                      <div className="flex w-full flex-col">
+                        <Select label="Occupation" outline="true">
+                          <Option value="professor">Professor</Option>
+                          <Option value="student">Student</Option>
+                          <Option value="other">Other</Option>
+                        </Select>
+                      </div>
+                    </div>
+                    <div className="mb-8 flex gap-8">
+                      <div className="flex w-full flex-col">
+                        <Select label="Request Type" outline="true">
+                          <Option value="order_request">Order request</Option>
+                          <Option value="quotation_request">Quotation request</Option>
+                          <Option value="other_request">Other request</Option>
+                          <Option value="approval_plan_request">
+                            Approval plan request
+                          </Option>
+                        </Select>
+                      </div>
+                    </div>
+                    <Textarea variant="standard" size="lg" label="Message" rows={8} />
+                    <Button variant="gradient" size="lg" className="mt-8">
+                      Send Message
+                    </Button>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="px-30 py-24 bg-white">
+        <div className="container mx-auto flex flex-wrap items-center justify-center p-8 md:flex-nowrap">
+          <div className="md:pr-30 mb-8 pb-8 md:mb-0 md:pr-40">
+            {" "}
+            {/* 모바일에서의 마진 변경 */}
+            <Typography variant="h5" className="mb-4 text-4xl font-bold">
+              PANMUN Co., Ltd.
+            </Typography>
+            <Typography className="mb-2 text-xl">
+              #501, Wooree Venture Town, 466 Gangseo-ro
+            </Typography>
+            <Typography className="mb-2 text-xl">
+              Gangseo-gu, Seoul, South Korea (07573)
+            </Typography>
+            <Typography className="mb-2 text-xl">
+              Tel. +82 02.2063.0606
+            </Typography>
+            <Typography className="text-xl">
+              Email. panex@epanmun.co.kr
+            </Typography>
+          </div>
+          <div className="relative w-full md:w-2/5">
+            <div style={{ paddingTop: "100%" }}></div>
+            <a
+              href="https://maps.app.goo.gl/gWNfvcge6Pd4vc2u8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/img/map.png"
+                alt="Map"
+                className="absolute left-0 top-0 h-full w-full object-cover"
+              />
+            </a>
           </div>
         </div>
       </section>

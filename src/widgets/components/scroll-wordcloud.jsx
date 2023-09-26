@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ReactWordcloud from 'react-wordcloud';
 
-function ScrollWordCloud({ wordsData }) {
+export function ScrollWordCloud({ wordsData }) {
   const [isVisible, setIsVisible] = useState(false);
   const wordCloudRef = useRef(null);
 

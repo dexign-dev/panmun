@@ -1,20 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export function IconText({ children, delay, iconSrc }) {
   const [visible, setVisible] = useState(false);
+  const iconRef = useRef(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, delay);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // 화면에 보이면
+        if (entries[0].isIntersecting) {
+          const timer = setTimeout(() => {
+            setVisible(true);
+          }, delay);
+          return () => {
+            clearTimeout(timer);
+          };
+        }
+      },
+      {
+        threshold: 0.5, 
+      }
+    );
+
+    if (iconRef.current) {
+      observer.observe(iconRef.current);
+    }
 
     return () => {
-      clearTimeout(timer);
+      if (iconRef.current) {
+        observer.unobserve(iconRef.current);
+      }
     };
   }, [delay]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center" ref={iconRef}>
       <img 
         src={iconSrc} 
         alt="icon" 

@@ -13,9 +13,8 @@ import {
 import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
-import IconText from "@/widgets/components/icon-text.jsx";
+import { IconText, ScrollWordCloud } from "@/widgets/components";
 import { featuresData, teamData, contactData, wordsData } from "@/data";
-import ScrollWordCloud from "@/widgets/components/scroll-wordcloud.jsx";
 
 export function Home() {
   return (
@@ -42,7 +41,7 @@ export function Home() {
                 <br />
               </Typography>
               <a href="#aboutUsSection">
-                <Button variant="outlined" className="mt-20 border-white text-lg text-white w-64">About Us</Button>
+                <Button variant="outlined" className="mt-40 border-white text-lg text-white w-64">About Us</Button>
               </a>
             </div>
           </div>
@@ -191,11 +190,11 @@ export function Home() {
           Complete this form and we will get back to you in 24 hours.
         </PageTitle>
         <form className="mx-auto mt-12 max-w-screen-lg text-center">
-          <div className="mb-8 flex gap-8">
+          <div className="mb-8 flex flex-col md:flex-row gap-8">
             <Input variant="standard" size="lg" label="Full Name" />
             <Input variant="standard" size="lg" label="Email Address" />
           </div>
-          <div className="mb-8 flex gap-8">
+          <div className="mb-8 flex flex-col md:flex-row gap-8">
             <Input variant="standard" size="lg" label="Affiliation" />
             <div className="flex w-full flex-col">
               <Select label="Occupation" outline="true">
