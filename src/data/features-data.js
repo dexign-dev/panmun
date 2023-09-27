@@ -1,7 +1,4 @@
 import {
-  StarIcon,
-  ArrowPathIcon,
-  FingerPrintIcon,
   InformationCircleIcon,
   InboxIcon,
   ArrowPathRoundedSquareIcon,
