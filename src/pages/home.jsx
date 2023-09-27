@@ -165,7 +165,7 @@ export function Home() {
 
         </div>
       </section>
-      <section className="h-[50vh] px-4 flex items-center">
+      <section className="h-auto md:h-[50vh] px-4 py-12 flex items-center">
         <div className="container mx-auto flex flex-wrap justify-center h-full">
 
           {/* 좌측 이미지 부분 */}
@@ -186,7 +186,7 @@ export function Home() {
       </section>
 
 
-      <section className="h-[50vh] relative bg-blue-gray-50/50 py-24 px-4">
+      <section className="h-auto md:h-[50vh] relative bg-blue-gray-50/50 py-24 px-4">
         <div className="container mx-auto flex flex-wrap justify-center h-full">
 
           {/* 좌측 2/3 부분 */}
