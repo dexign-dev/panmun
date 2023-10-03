@@ -1,6 +1,7 @@
 import React from 'react';
 
 export function FloatingButton() {
+    const isMobile = window.innerWidth <= 768;
     const handleClick = () => {
         const target = document.getElementById('contactUsSection');
         if (target) {
@@ -16,16 +17,15 @@ export function FloatingButton() {
             onClick={handleClick} 
             style={{
                 position: 'fixed',
-                bottom: '50px',
-                right: '60px',
-                background: `url('/public/img/floating.png') no-repeat center`,
-                backgroundSize: 'cover',
-                width: '60px',  // 원하는 크기로 조절 가능
-                height: '60px',
+                bottom: isMobile ? '15px' : '30px',  // 모바일 환경일 경우 15px, 아닐 경우 30px
+                right: isMobile ? '15px' : '30px',  // 모바일 환경일 경우 20px, 아닐 경우 40px
+                background: `url('/img/floating_contact.png') no-repeat center`,
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                width: isMobile ? '50px' : '70px',  // 모바일 환경일 경우 40px, 아닐 경우 80px
+                height: isMobile ? '50px' : '80px',  // 모바일 환경일 경우 45px, 아닐 경우 90px
                 border: 'none',
-                borderRadius: '50%',
                 cursor: 'pointer',
-                boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
             }}
         />
     );

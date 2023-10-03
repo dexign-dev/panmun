@@ -5,75 +5,59 @@ const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pb-6 pt-8 bg-blue-gray-50/50">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap pt-6 text-center lg:text-left">
-          <div className="w-full px-4 lg:w-6/12">
-            <Typography variant="h4" className="mb-4" color="blue-gray">
+    <footer className="relative px-4 py-8 md:py-24 flex flex-col md:flex-row justify-center items-start md:items-center bg-gray-800">
+      <div className="container mx-auto text-white w-full md:max-w-6xl space-y-8 md:space-y-0">
+        
+        <div className="flex flex-col md:mb-5 md:flex-row gap-6 md:gap-16 w-full items-start md:items-center">
+          <div className="flex flex-col justify-center items-start w-full md:mb-0">
+            <Typography variant="h4" className="mb-2 text-lg lg:text-xl font-bold text-left" color="white">
               {title}
             </Typography>
-            <Typography className="font-normal text-blue-gray-500">
+            <Typography className="font-normal text-white mb-2 text-left">
               {description}
             </Typography>
-            <div className="mx-auto mb-8 mt-6 flex justify-center gap-2 md:mb-0 lg:justify-start">
-              {socials.map(({ color, name, path }) => (
-                <a
-                  key={name}
-                  href={path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconButton color="white" className="rounded-full">
-                    <Typography color={color}>
-                      <i className={`fa-brands fa-${name}`} />
-                    </Typography>
-                  </IconButton>
-                </a>
-              ))}
-            </div>
           </div>
-          <div className="mx-auto mt-12 flex justify-center gap-24 lg:mt-0">
-            {menus.map(({ name, items }) => (
-              <div key={name} className="flex flex-col">
-                <Typography
-                  variant="small"
-                  color="blue-gray"
-                  className="mb-2 block font-medium uppercase"
-                >
-                  {name}
-                </Typography>
-                <ul className="mt-3 flex">
-                  {items.map((item) => (
-                    <li key={item.name} className="mr-4 last:mr-0">
-                      <Typography
-                        as="a"
-                        style={{ cursor: "pointer" }}
-                        href={item.path}
-                        onClick={item.onClick}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="small"
-                        className="mb-2 block font-normal text-blue-gray-500 hover:text-blue-gray-700"
-                      >
-                        {item.name}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+
+          <div className="flex flex-col items-start text-left w-full">
+            <Typography variant="h6" color="white" className="font-bold uppercase">
+              {menus[0].name}
+            </Typography>
+            <ul className="flex flex-wrap gap-4">
+              {menus[0].items.map((item) => (
+                <li key={item.name} className="mt-2">
+                  <Typography
+                    as="a"
+                    style={{ cursor: "pointer" }}
+                    href={item.path}
+                    onClick={item.onClick}
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="small"
+                    className="font-normal text-white hover:text-blue-500"
+                  >
+                    {item.name}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <hr className="my-6 border-gray-300" />
-        <div className="flex flex-wrap items-center justify-center md:justify-between">
-          <div className="mx-auto w-full px-4 text-center">
-            <Typography
-              variant="small"
-              className="font-normal text-blue-gray-500"
-            >
-              {copyright}
-            </Typography>
+
+        <div className="flex flex-col items-start w-full mt-6 md:mt-0 space-y-6">
+          <div className="flex gap-4 mb-2">
+            {socials.map(({ color, name, path }) => (
+              <a key={name} href={path} target="_blank" rel="noopener noreferrer">
+                <IconButton color="white" className="rounded-full md:text-base text-xs">
+                  <Typography color={color}>
+                    <i className={`fa-brands fa-${name}`} />
+                  </Typography>
+                </IconButton>
+              </a>
+            ))}
           </div>
+          <Typography variant="small" className="font-normal text-white">
+            {copyright}
+          </Typography>
         </div>
       </div>
     </footer>
@@ -117,7 +101,7 @@ Footer.defaultProps = {
   ],
   menus: [
     {
-      name: "useful links",
+      name: "Company",
       items: [
         { name: "About Us", 
           onClick: () => handleScrollTo("aboutUsSection")
@@ -126,7 +110,6 @@ Footer.defaultProps = {
           name: "Contact Us",
           onClick: () => handleScrollTo("contactUsSection")
         },
-        { name: "Blog", path: "https://www.panmun.com" },
         {
           name: "MIT License",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/17a585f88189a550ae7b7f17ac71d5b65b48dddc/LICENSE",
@@ -140,7 +123,7 @@ Footer.defaultProps = {
       <a
         href=""
         target="_blank"
-        className="text-blue-gray-500 transition-colors hover:text-blue-500"
+        className="text-white transition-colors hover:text-blue-500"
       >
         PANMUN CO.,LTD.
       </a>

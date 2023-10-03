@@ -38,7 +38,7 @@ export function IconText({ children, delay, iconSrc }) {
       <img 
         src={iconSrc} 
         alt="icon" 
-        className={`w-9 h-9 mr-4 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"}`} 
+        className={`w-11 h-11 mr-4 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"}`} 
       />
       <div>{children}</div>
     </div>

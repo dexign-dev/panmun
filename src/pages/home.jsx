@@ -26,13 +26,12 @@ export function Home() {
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography
-                variant="h1"
                 color="white"
-                className="mb-6 font-black"
+                className="mt-30 md:mt-0 mb-6 text-3xl md:text-5xl font-black"
               >
                 PANMUN CO., LTD.
               </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
+              <Typography variant="lead" color="white" className="opacity-80 text-base md:text-xl">
                 PANMUN은 전통적인 도서 제공 뿐 아니라 도서관에 필요한 전반적인
                 서비스,
                 <br />
@@ -41,19 +40,24 @@ export function Home() {
                 <br />
               </Typography>
               <a href="#aboutUsSection">
-                <Button variant="outlined" className="mt-40 border-white text-lg text-white w-64">About Us</Button>
+                <Button
+                  variant="outlined"
+                  className="mt-40 w-64 border-white text-lg text-white"
+                >
+                  About Us
+                </Button>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <section id="aboutUsSection" className="py-24 px-4 bg-white">
+      <section id="aboutUsSection" className="bg-white px-4 py-24">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto mt-8 w-full px-2 md:w-5/12">
               <Typography
                 variant="h3"
-                className="mb-5 font-bold"
+                className="mb-5 font-bold text-2xl md:text-3xl"
                 color="blue-gray"
               >
                 1950s부터 함께해 온 우리는
@@ -80,20 +84,15 @@ export function Home() {
                   기업입니다.
                 </IconText>
               </div>
-              <div className="mt-10 mb-10 flex w-full justify-start">
+              <div className="mb-10 mt-10 flex w-full justify-start">
                 {" "}
                 <a
                   href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button
-                    variant="gradient"
-                  >
-                    READ MORE
-                  </Button>
+                  <Button variant="gradient">READ MORE</Button>
                 </a>
-
               </div>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
@@ -126,25 +125,23 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="py-24 px-4 bg-blue-gray-50/50">
+      <section className="bg-blue-gray-50/50 px-4 py-16">
         <div className="container mx-auto">
           <PageTitle heading="Our Service">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 py-5">
+            <div className="grid grid-cols-1 gap-6 py-5 md:grid-cols-2 lg:grid-cols-3">
               {featuresData.map(({ color, title, icon, description }) => (
                 <FeatureCard
                   key={title}
                   color={color}
                   title={title}
-                  icon={React.createElement(icon, {
-                    className: "w-5 h-5 text-white",
-                  })}
+                  icon={icon}
                   description={description}
                 />
               ))}
             </div>
           </PageTitle>
 
-          <div className="mt-10 mb-6 flex w-full justify-center">
+          <div className="mt-6 mb-4 flex w-full justify-center">
             {/* mb-48 추가하여 버튼과 바닥의 간격 조정 */}
             <Button
               variant="gradient"
@@ -155,53 +152,70 @@ export function Home() {
                 )
               }
             >
-              <img
-                src="public/img/download.png"
-                alt="Download Icon"
-              />
+              <img src="/img/download.png" alt="Download Icon" />
               BROCHURE DOWNLOAD
             </Button>
           </div>
-
         </div>
       </section>
-      <section className="h-auto md:h-[50vh] px-4 py-12 flex items-center">
-        <div className="container mx-auto flex flex-wrap justify-center h-full">
-
+      <section className="flex h-auto items-center px-4 py-12 md:min-h-[50vh]">
+        <div className="container mx-auto flex h-full flex-wrap justify-center px-4">
           {/* 좌측 이미지 부분 */}
-          <div className="w-full md:w-2/5 flex items-center justify-center mb-8 md:mb-0">
-            <img src="public/img/hub.png" alt="Hub Image" className="max-w-sm" />
+          <div className="mb-8 flex w-full items-center justify-center md:mb-0 md:w-2/5">
+            <img
+              src="/img/hub.png"
+              alt="Hub Image"
+              className="max-w-sm"
+            />
           </div>
 
           {/* 우측 텍스트 부분 */}
-          <div className="w-full md:w-3/5 flex flex-col justify-center px-6">
-            <Typography variant="h3" color="blue-gray" className="mb-6 font-extrabold text-3xl">
+          <div className="flex w-full flex-col justify-center px-6 md:w-3/5">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="mb-6 text-2xl md:text-3xl font-extrabold"
+            >
               Library Solution Hub
             </Typography>
             <Typography className="font-normal text-blue-gray-700">
-              우리는 보다 효율적인 한국컬렉션을 관리할 수 있도록 새로운 '허브'라는 조직을 만들었습니다. <br />허브는 원활한 소통을 통해 한국학자료에 대한 새로운 아이디어와 솔루션을 제공드립니다.
+              우리는 보다 효율적인 한국컬렉션을 관리할 수 있도록 새로운
+              '허브'라는 조직을 만들었습니다. <br />
+              허브는 원활한 소통을 통해 한국학자료에 대한 새로운 아이디어와
+              솔루션을 제공드립니다.
             </Typography>
           </div>
         </div>
       </section>
 
-
-      <section className="h-auto md:h-[50vh] relative bg-blue-gray-50/50 py-24 px-4">
-        <div className="container mx-auto flex flex-wrap justify-center h-full">
-
+      <section className="relative h-auto bg-blue-gray-50/50 px-4 py-24 md:min-h-[50vh]">
+        <div className="container mx-auto flex h-full flex-wrap justify-center">
           {/* 좌측 2/3 부분 */}
-          <div className="w-full mb-10 md:w-2/5 px-4 flex flex-col justify-center"> {/* 여기에서 flex와 justify-center를 추가했습니다. */}
-            <Typography variant="h3" color="blue-gray" className="mb-6 font-extrabold text-3xl">
+          <div className="mb-4 flex w-full flex-col justify-center px-4 md:w-2/5">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="mb-6 text-3xl font-extrabold"
+            >
               What we recommend
             </Typography>
-            <Typography className="font-normal text-blue-gray-700 mb-6">
-              <span className="font-bold">&lt;THE ACTOR IS PRESENT&gt;</span> is a unprecedented book, featuring photographs of 200 Korean actors representative of the past, present, and future of Korean films and the reviews of which summarize the actors' acting world in-depth of the actors.
+            <Typography className="mb-6 font-normal text-blue-gray-700">
+              <span className="font-bold">&lt;THE ACTOR IS PRESENT&gt;</span> is
+              a unprecedented book, featuring photographs of 200 Korean actors
+              representative of the past, present, and future of Korean films
+              and the reviews of which summarize the actors' acting world
+              in-depth of the actors.
             </Typography>
-            <div className="text-start mt-6">
+            <div className="mt-6 text-start">
               <Button
                 variant="gradient"
                 className="inline-flex items-center"
-                onClick={() => window.open("https://assets.nicepagecdn.com/5af1a9de/5788855/files/THEACTORISPRESENT_PANMUN.pdf", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://assets.nicepagecdn.com/5af1a9de/5788855/files/THEACTORISPRESENT_PANMUN.pdf",
+                    "_blank"
+                  )
+                }
               >
                 Read More
               </Button>
@@ -209,76 +223,131 @@ export function Home() {
           </div>
 
           {/* 우측 1/3 이미지 부분 */}
-          <div className="w-full md:w-2/5 flex items-center justify-center">
-            <img src="public/img/undraw_book_lover_mkck 2.svg" alt="Book Lover Illustration" className="max-w-xs mx-auto" />
+          <div className="flex w-full items-center justify-center md:w-2/5">
+            <img
+              src="/img/recommend.svg"
+              alt="Book Lover Illustration"
+              className="mx-auto max-w-xs"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="relative flex h-auto items-center justify-center px-4 py-24 md:min-h-[60vh]"
+        style={{
+          backgroundImage: "url('/img/ksdc.png')",
+          backgroundSize: "cover",
+        }}
+      >
+        {/* 검은색에서 50% 투명한 레이어 */}
+        <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
+
+        <div className="relative z-20 space-y-8 text-center">
+          <h2 className="text-4xl font-bold text-white">KSDC</h2>
+          <h3 className="text-2xl text-white">
+            Korea Social Science Data Center
+          </h3>
+          <p className="text-sm md:text-lg text-white">
+            The unified DB of Korean Social Science Data Center (KSDC) consist
+            of all kinds of statistical <br /> yearbooks published by the
+            government, public institutions and overseas institutions
+          </p>
+          <div className="flex flex-wrap justify-between pt-8 md:pt-16">
+            <a
+              href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+            >
+              READ MORE <span className="ml-1">→</span>
+            </a>
+            <a
+              href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+            >
+              홈페이지 이용자 교육 <span className="ml-1">→</span>
+            </a>
+            <a
+              href="https://www.ksdcdb.kr/main.do"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+            >
+              LINK_KSDC <span className="ml-1">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative h-auto bg-blue-gray-50/50 px-4 py-24 md:min-h-[50vh]">
+        <div className="justify-startm md:pr-30 container mx-auto flex h-full flex-wrap">
+          {/* 좌측 이미지 부분 */}
+          <div className="mb-4 flex w-full items-center justify-center md:mb-0 md:w-2/5">
+            <img
+              src="/img/lawnb.svg"
+              alt="LawnB Illustration"
+              className="mx-auto max-w-xs"
+            />
           </div>
 
+          {/* 우측 2/3 부분 */}
+          <div className="flex w-full flex-col justify-center px-4 md:w-2/5">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="mb-2 text-3xl font-extrabold"
+            >
+              LawnB
+            </Typography>
+            <Typography className="mb-4 font-normal text-blue-gray-700">
+              now Thomson Reuters Korea
+            </Typography>
+            <Typography className="mb-6 font-normal text-blue-gray-700">
+              The largest online collection of Korean legal materials, LawnB’s{" "}
+              <br />
+              Legal Information Service is a portal service for all law-related
+              issues and so on.
+            </Typography>
+            <div className="flex flex-wrap justify-between pt-8 md:pt-16">
+              <a
+                href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+              >
+                READ MORE <span className="ml-1">→</span>
+              </a>
+              <a
+                href="https://support.thomsonreuters.co.kr/product/lawnb/articles"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+              >
+                홈페이지 이용자 교육 <span className="ml-1">→</span>
+              </a>
+              <a
+                href="https://www.lawnb.com/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
+              >
+                LINK_KSDC <span className="ml-1">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 px-4">
-        <div className="container mx-auto">
-          <PageTitle heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
-          </PageTitle>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-            {contactData.map(({ title, icon, description }) => (
-              <Card
-                key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
-              >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5",
-                  })}
-                </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="relative bg-blue-gray-50/50 py-24 px-4">
-        <div className="container mx-auto">
-          <PageTitle heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
-          </PageTitle>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-            {contactData.map(({ title, icon, description }) => (
-              <Card
-                key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
-              >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5",
-                  })}
-                </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="relative py-24 px-4 bg-white">
+      <section className="relative bg-white px-4 py-24">
         <div className="container mx-auto">
           <PageTitle heading="Trending New Hit">
             <div className="mt-8" style={{ height: "200px", width: "100%" }}>
@@ -292,16 +361,19 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section id="contactUsSection" className="relative py-24 px-4 bg-blue-gray-50/50">
+      <section
+        id="contactUsSection"
+        className="relative bg-blue-gray-50/50 px-4 py-24"
+      >
         <PageTitle heading="Want to work with us?">
           Complete this form and we will get back to you in 24 hours.
         </PageTitle>
         <form className="mx-auto mt-12 max-w-screen-lg text-center">
-          <div className="mb-8 flex flex-col md:flex-row gap-8">
+          <div className="mb-8 flex flex-col gap-8 md:flex-row">
             <Input variant="standard" size="lg" label="Full Name" />
             <Input variant="standard" size="lg" label="Email Address" />
           </div>
-          <div className="mb-8 flex flex-col md:flex-row gap-8">
+          <div className="mb-8 flex flex-col gap-8 md:flex-row">
             <Input variant="standard" size="lg" label="Affiliation" />
             <div className="flex w-full flex-col">
               <Select label="Occupation" outline="true">
@@ -330,7 +402,7 @@ export function Home() {
         </form>
       </section>
 
-      <section className="px-30 py-24 bg-white">
+      <section className="px-30 bg-white py-24">
         <div className="container mx-auto flex flex-wrap items-center justify-center p-8 md:flex-nowrap">
           <div className="md:pr-30 mb-8 pb-8 md:mb-0 md:pr-40">
             {" "}
@@ -338,16 +410,16 @@ export function Home() {
             <Typography variant="h5" className="mb-4 text-4xl font-bold">
               PANMUN Co., Ltd.
             </Typography>
-            <Typography className="mb-2 text-xl">
+            <Typography className="mb-2 text-sm md:text-xl">
               #501, Wooree Venture Town, 466 Gangseo-ro
             </Typography>
-            <Typography className="mb-2 text-xl">
+            <Typography className="mb-2 text-sm md:text-xl">
               Gangseo-gu, Seoul, South Korea (07573)
             </Typography>
-            <Typography className="mb-2 text-xl">
+            <Typography className="mb-2 text-sm md:text-xl">
               Tel. +82 02.2063.0606
             </Typography>
-            <Typography className="text-xl">
+            <Typography className="text-sm md:text-xl">
               Email. panex@epanmun.co.kr
             </Typography>
           </div>
