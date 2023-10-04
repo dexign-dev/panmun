@@ -62,7 +62,7 @@ export function ContactForm() {
             const result = await response.json();
 
             // Handle response as needed
-            alert(result);
+            alert("The message has been sent successfully.");
 
         } catch (error) {
             console.error("There was an error:", error);
@@ -126,6 +126,7 @@ export function ContactForm() {
                             name="title"
                             value={formData.title}
                             onChange={handleChange}
+                            required
                         >
                             <Option value="order_request">Order request</Option>
                             <Option value="quotation_request">Quotation request</Option>
