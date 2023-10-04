@@ -258,7 +258,7 @@ export function Home() {
               href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-base transition-shadow duration-300 hover:underline"
               style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
             >
               READ MORE <span className="ml-1">→</span>
@@ -267,7 +267,7 @@ export function Home() {
               href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-base transition-shadow duration-300 hover:underline"
               style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
             >
               홈페이지 이용자 교육 <span className="ml-1">→</span>
@@ -276,7 +276,7 @@ export function Home() {
               href="https://www.ksdcdb.kr/main.do"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-lg transition-shadow duration-300 hover:underline"
+              className="flex items-center mb-4 md:mb-0 whitespace-nowrap text-white text-xs md:text-base transition-shadow duration-300 hover:underline"
               style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
             >
               LINK_KSDC <span className="ml-1">→</span>
@@ -285,10 +285,10 @@ export function Home() {
         </div>
       </section>
 
-      <section className="relative h-auto bg-blue-gray-50/50 px-4 py-24 md:min-h-[50vh]">
-        <div className="justify-startm md:pr-30 container mx-auto flex h-full flex-wrap">
+      <section className="relative h-auto bg-blue-gray-50/50 md:pl-24 px-4 py-24 md:min-h-[50vh]">
+        <div className="justify-start container mx-auto flex h-full flex-wrap">
           {/* 좌측 이미지 부분 */}
-          <div className="mb-4 flex w-full items-center justify-center md:mb-0 md:w-2/5">
+          <div className="mb-4 flex w-full items-center justify-center md:mr-4 md:mb-0 md:w-2/5">
             <img
               src="/img/lawnb.svg"
               alt="LawnB Illustration"
@@ -319,7 +319,7 @@ export function Home() {
                 href="https://assets.nicepagecdn.com/5af1a9de/5788855/files/20230310_panmun_brochur.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                className="flex items-center mb-4 whitespace-nowrap text-xs md:text-base transition-shadow duration-300 hover:underline"
                 style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
               >
                 READ MORE <span className="ml-1">→</span>
@@ -328,7 +328,7 @@ export function Home() {
                 href="https://support.thomsonreuters.co.kr/product/lawnb/articles"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                className="flex items-center mb-4 whitespace-nowrap text-xs md:text-base transition-shadow duration-300 hover:underline"
                 style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
               >
                 홈페이지 이용자 교육 <span className="ml-1">→</span>
@@ -337,7 +337,7 @@ export function Home() {
                 href="https://www.lawnb.com/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center whitespace-nowrap text-xs md:text-lg transition-shadow duration-300 hover:underline"
+                className="flex items-center mb-4 whitespace-nowrap text-xs md:text-base transition-shadow duration-300 hover:underline"
                 style={{ color: "#4994EC", textShadow: "0px 0px 15px #80BBFF" }}
               >
                 LINK_KSDC <span className="ml-1">→</span>
@@ -407,7 +407,7 @@ export function Home() {
           <div className="md:pr-30 mb-8 pb-8 md:mb-0 md:pr-40">
             {" "}
             {/* 모바일에서의 마진 변경 */}
-            <Typography variant="h5" className="mb-4 text-4xl font-bold">
+            <Typography variant="h5" className="mb-4 text-3xl md:text-4xl font-bold">
               PANMUN Co., Ltd.
             </Typography>
             <Typography className="mb-2 text-sm md:text-xl">

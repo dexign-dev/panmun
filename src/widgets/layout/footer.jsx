@@ -13,7 +13,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             <Typography variant="h4" className="mb-2 text-lg lg:text-xl font-bold text-left" color="white">
               {title}
             </Typography>
-            <Typography className="font-normal text-white mb-2 text-left">
+            <Typography className="font-normal text-xs md:text-sm text-white mb-2 text-left">
               {description}
             </Typography>
           </div>
@@ -33,7 +33,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                     target="_blank"
                     rel="noreferrer"
                     variant="small"
-                    className="font-normal text-white hover:text-blue-500"
+                    className="font-normal text-xs md:text-sm text-white hover:text-blue-500"
                   >
                     {item.name}
                   </Typography>
