@@ -10,11 +10,10 @@ import {
   Input,
   Textarea,
 } from "@material-tailwind/react";
-import { UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
+import { PageTitle, Footer, ContactForm } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { IconText, ScrollWordCloud } from "@/widgets/components";
-import { featuresData, teamData, contactData, wordsData } from "@/data";
+import { featuresData, teamData, wordsData } from "@/data";
 
 export function Home() {
   return (
@@ -365,41 +364,7 @@ export function Home() {
         id="contactUsSection"
         className="relative bg-blue-gray-50/50 px-4 py-24"
       >
-        <PageTitle heading="Want to work with us?">
-          Complete this form and we will get back to you in 24 hours.
-        </PageTitle>
-        <form className="mx-auto mt-12 max-w-screen-lg text-center">
-          <div className="mb-8 flex flex-col gap-8 md:flex-row">
-            <Input variant="standard" size="lg" label="Full Name" />
-            <Input variant="standard" size="lg" label="Email Address" />
-          </div>
-          <div className="mb-8 flex flex-col gap-8 md:flex-row">
-            <Input variant="standard" size="lg" label="Affiliation" />
-            <div className="flex w-full flex-col">
-              <Select label="Occupation" outline="true">
-                <Option value="professor">Professor</Option>
-                <Option value="student">Student</Option>
-                <Option value="other">Other</Option>
-              </Select>
-            </div>
-          </div>
-          <div className="mb-8 flex gap-8">
-            <div className="flex w-full flex-col">
-              <Select label="Request Type" outline="true">
-                <Option value="order_request">Order request</Option>
-                <Option value="quotation_request">Quotation request</Option>
-                <Option value="other_request">Other request</Option>
-                <Option value="approval_plan_request">
-                  Approval plan request
-                </Option>
-              </Select>
-            </div>
-          </div>
-          <Textarea variant="standard" size="lg" label="Message" rows={8} />
-          <Button variant="gradient" size="lg" className="mt-8">
-            Send Message
-          </Button>
-        </form>
+        <ContactForm />
       </section>
 
       <section className="px-30 bg-white py-24">
