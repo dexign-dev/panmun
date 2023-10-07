@@ -27,7 +27,7 @@ export function Navbar({ brandName, routes }) {
         <Typography
           key={name}
           as="li"
-          variant="normal"
+          variant="h6"
           color="inherit"
           className="capitalize"
         >
@@ -35,7 +35,7 @@ export function Navbar({ brandName, routes }) {
             <a
               href={href}
               target={target}
-              className="flex items-center gap-1 p-1 font-normal"
+              className="flex items-center gap-1 p-1 font-lead"
             >
               {icon &&
                 React.createElement(icon, {
