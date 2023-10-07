@@ -7,17 +7,17 @@ import {
 
 export function FeatureCard({ icon, title, description }) {
   return (
-    <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
+    <Card className="w-15 rounded-2xl shadow-2xl">
       <CardBody className="px-4 text-center">
         <img 
           src={icon} 
           alt={title} 
           className="mb-6 w-12 h-12 mx-auto" // 크기는 필요에 따라 조정하세요.
         />
-        <Typography variant="h3" color="blue-gray" className="leading-tight">
+        <Typography variant="h3" color="blue-gray" className="">
           {title}
         </Typography>
-        <Typography className="font-normal text-blue-gray-600 leading-tight descriptionText">
+        <Typography className="font-normal text-blue-gray-600 descriptionText">
           {description}
         </Typography>
       </CardBody>

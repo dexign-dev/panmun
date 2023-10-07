@@ -27,7 +27,7 @@ export function Navbar({ brandName, routes }) {
         <Typography
           key={name}
           as="li"
-          variant="small"
+          variant="normal"
           color="inherit"
           className="capitalize"
         >
@@ -39,7 +39,7 @@ export function Navbar({ brandName, routes }) {
             >
               {icon &&
                 React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
+                  className: "w-[20px] h-[20px] opacity-75 mr-1",
                 })}
               {name}
             </a>
@@ -47,11 +47,11 @@ export function Navbar({ brandName, routes }) {
             <Link
               to={path}
               target={target}
-              className="flex items-center gap-1 p-1 font-normal"
+              className="flex items-center gap-1 p-1 font-bold"
             >
               {icon &&
                 React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
+                  className: "w-[20px] h-[20px] opacity-75 mr-1",
                 })}
               {name}
             </Link>
@@ -86,7 +86,7 @@ export function Navbar({ brandName, routes }) {
         </IconButton>
       </div>
       <MobileNav
-        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
+        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-700"
         open={openNav}
       >
         <div className="container mx-auto">
