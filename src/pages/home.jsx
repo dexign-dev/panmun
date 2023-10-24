@@ -120,7 +120,7 @@ export function Home() {
                 Library Solution Hub
               </Typography>
               <Typography className="italic text-xs md:text-sm lg:text-lg text-white font-semibold md:font-extrabold">
-                "우리는 보다 효율적인 한국컬렉션을 관리할 수 있도록 새로운 '허브'라는 조직을 만들었습니다. <br/> 허브는 원활한 소통을 통해 한국학자료에 대한 새로운 아이디어와 솔루션을 제공드립니다."
+                "우리는 보다 효율적인 한국컬렉션을 관리할 수 있도록 새로운 '허브'라는 조직을 만들었습니다. <br /> 허브는 원활한 소통을 통해 한국학자료에 대한 새로운 아이디어와 솔루션을 제공드립니다."
               </Typography>
             </div>
           </div>
@@ -146,7 +146,7 @@ export function Home() {
         </PageTitle>
       </section>
 
-      <section className="relative bg-white px-4 py-24">
+      {/* <section className="relative bg-white px-4 py-24">
         <div className="container mx-auto">
           <PageTitle heading="Trending New Hit">
             <div className="mt-8" style={{ height: "200px", width: "100%" }}>
@@ -159,11 +159,11 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="relative h-auto bg-blue-gray-50/50 px-4 py-24 md:min-h-[80vh]">
+      {/* <section className="relative h-auto bg-blue-gray-50/50 px-4 py-24 md:min-h-[80vh]">
         <div className="container mx-auto flex flex-col md:flex-row h-full items-center justify-center">
-          {/* 좌측 2/3 부분 */}
+          
           <div className="flex w-full flex-col justify-center px-4 mb-10 md:mb-0 md:w-1/2">
             <Typography
               variant="h3"
@@ -199,11 +199,11 @@ export function Home() {
             <img
               src="/img/recommend.png"
               alt="Book Lover Illustration"
-              className="rounded-lg mx-auto mt-10 w-2/3 md:w-3/4 lg:w-2/5 max-w-xs" // 'rounded' 추가
+              className="rounded-lg mx-auto mt-10 w-2/3 md:w-3/4 lg:w-2/5 max-w-xs" 
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <SlickComponent />
 
@@ -236,17 +236,20 @@ export function Home() {
             </Typography>
           </div>
           <div className="relative w-full md:w-2/5">
-            <div style={{ paddingTop: "100%" }}></div>
             <a
-              href="https://maps.app.goo.gl/gWNfvcge6Pd4vc2u8"
+              href="https://maps.app.goo.gl/Y6mvkSMBjqovM1ro8"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="/img/map.png"
-                alt="Map"
-                className="absolute left-0 top-0 h-full w-full object-cover"
-              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d472.93083338285635!2d126.84135539825859!3d37.56697831384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c74264e382b%3A0xe7140f7c223f454d!2z7Jqw66as67Kk7LKY7YOA7Jq0!5e0!3m2!1sko!2skr!4v1698133466841!5m2!1sko!2skr&hl=en"
+                width="100%"
+                height="500vh"
+                frameborder="0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
             </a>
           </div>
         </div>
