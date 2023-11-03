@@ -34,13 +34,13 @@ export function IconText({ children, delay, iconSrc }) {
   }, [delay]);
 
   return (
-    <div className="flex items-center mb-5" ref={iconRef}>
-      <img 
-        src={iconSrc} 
-        alt="icon" 
-        className={`w-13 h-13 mr-4 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"}`} 
+    <div className="flex items-center" ref={iconRef}>
+      <img
+        src={iconSrc}
+        alt="icon"
+        className={`w-10 h-10 mr-3 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"}`}
       />
-      <div className="text-lg">{children}</div>
+      <div className="text-xs lg:text-base">{children}</div>
     </div>
   );
 }

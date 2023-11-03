@@ -83,21 +83,6 @@ Footer.defaultProps = {
       name: "instagram",
       path: "https://www.instagram.com/",
     },
-    {
-      color: "pink",
-      name: "dribbble",
-      path: "https://www.dribbble.com/",
-    },
-    {
-      color: "red",
-      name: "youtube",
-      path: "https://www.youtube.com/channel/",
-    },
-    {
-      color: "black",
-      name: "github",
-      path: "https://github.com/",
-    },
   ],
   menus: [
     {

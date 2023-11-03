@@ -35,7 +35,7 @@ export function Navbar({ brandName, routes }) {
             <a
               href={href}
               target={target}
-              className="flex items-center gap-1 p-1 font-lead"
+              className="flex items-center gap-1 p-1 font-medium"
             >
               {icon &&
                 React.createElement(icon, {
@@ -47,7 +47,7 @@ export function Navbar({ brandName, routes }) {
             <Link
               to={path}
               target={target}
-              className="flex items-center gap-1 p-1 font-bold"
+              className="flex items-center gap-1 p-1 font-medium"
             >
               {icon &&
                 React.createElement(icon, {
@@ -63,12 +63,13 @@ export function Navbar({ brandName, routes }) {
 
   return (
     <MTNavbar color="transparent" className="p-3">
-      <div className="container mx-auto flex items-center justify-between text-white">
+      <div className="container mx-auto flex items-center justify-between text-black">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
-          <DocumentIcon className="-mt-0.5 inline-block h-3.5 w-3.5" />{" "}
-            {brandName}
-          </Typography>
+          <img
+            src="/img/logo_black.png"
+            alt="logo"
+            className="h-full w-[25vw] lg:w-[6vw]"
+          />
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <IconButton
@@ -86,7 +87,7 @@ export function Navbar({ brandName, routes }) {
         </IconButton>
       </div>
       <MobileNav
-        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-700"
+        className="rounded-xl bg-black px-4 pt-2 pb-4 text-blue-gray-700"
         open={openNav}
       >
         <div className="container mx-auto">
